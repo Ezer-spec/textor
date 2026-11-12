@@ -1,0 +1,67 @@
+LSL-Copyleft 3.0 — Copyright (c) 2026-2xxx Ezer
+
+Permission to use, copy, modify, and distribute:
+
+The author(s) hereby grant any person who obtains a copy of this software and
+associated documentation (the "Software") a royalty-free, non-exclusive, worldwide right to:
+
+- use the Software for any purpose (excluding the training of AI models)
+- copy and distribute an unlimited number of copies
+- modify the Software and create derivative works
+- incorporate the Software into commercial products and grant sublicenses,
+provided that all terms of this license are met.
+
+# Copyleft and Source Code Distribution:
+
+Any distribution of the Software or derivative works, whether in source or object form,
+must be carried out in full compliance with the LSL-Copyleft license, without any
+additional restrictions that would limit the rights granted by this license.
+
+If you distribute the Software or derivative works in executable or object form,
+you are required to provide the complete corresponding source code, in accordance
+with this license, to all recipients—either:
+
+along with the binary files, or
+by providing a written offer, valid for at least 3 years, to supply the source code
+for a reasonable reproduction fee.
+
+"Source code" refers to the preferred form of the work for making modifications,
+including all build scripts and interface definitions necessary for generating,
+installing, and running the executable file. The mere inclusion of the Software alongside other separate and independent works
+on a storage or distribution medium does not, in itself, cause those other works
+to become subject to this license, though it does require compliance with the license.
+
+# Notice Requirement:
+
+The following copyright notice and a reference to this license must be included
+in all copies or substantial portions of the Software and any derivative works:
+
+Copyright (c) 2026‑2xxx Ezer
+License: LSL‑Copyleft 3.0 (Libre Small License)
+
+Disclaimer of Warranty and Limitation of Liability
+
+THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, AND NON-INFRINGEMENT. UNDER NO CIRCUMSTANCES SHALL THE AUTHOR(S) OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIMS, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH
+THE SOFTWARE OR THE USE THEREOF.
+
+Patent Grant
+
+The author(s) hereby grant a limited patent license to use their patents that are
+necessarily infringed by the use or distribution of the Software in accordance with the terms of this
+license. This patent grant is subject to the aforementioned copyleft conditions and does not extend to third-party patents.
+
+Additional Terms:
+
+- Nothing in this license overrides rights granted under applicable law.
+
+- You may not impose further restrictions on the exercise of the rights granted
+under this license to recipients of the Software or derivative works.
+
+- Any additional restrictions imposed by distributors do not apply to the original
+copies of the Software, unless otherwise expressly agreed upon with the author(s), the use of AI for analyzing, altering, or modifying code—as well as for distributing or performing any further actions with such code—is prohibited. If an author has utilized AI models, they are required to inform users who receive the software and document this usage within the source code itself, in a file named `AI.md`. The use of AI is permitted exclusively for translation into other languages; such usage is exempt from both the prohibition and the requirement to provide notification regarding AI involvement.
+
+Ezer
+2026–2xxx

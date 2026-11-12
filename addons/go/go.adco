@@ -1,0 +1,61 @@
+// Go Language Support
+// Converted to Adco. See docs/ADCO.md for the format.
+
+addon "Go Language Support" {
+    version: "1.0"
+    author: "Textor Community"
+
+    language "Go" {
+        extensions: [".go"]
+
+        keywords: [
+            "break", "case", "chan", "const", "continue", "default",
+            "defer", "else", "fallthrough", "for", "func", "go",
+            "goto", "if", "import", "interface", "map", "package",
+            "range", "return", "select", "struct", "switch", "type",
+            "var", "nil", "true", "false", "iota"
+        ]
+
+        types: [
+            "bool", "byte", "complex64", "complex128", "error", "float32",
+            "float64", "int", "int8", "int16", "int32", "int64",
+            "rune", "string", "uint", "uint8", "uint16", "uint32",
+            "uint64", "uintptr", "any"
+        ]
+
+        builtins: [
+            "append", "cap", "close", "complex", "copy", "delete",
+            "imag", "len", "make", "new", "panic", "print",
+            "println", "real", "recover", "Println", "Printf", "Print",
+            "Sprintf", "Sprintln", "Errorf", "Fatal", "Fatalf", "Fatalln"
+        ]
+
+        completions: [
+            "fmt.Println", "fmt.Printf", "fmt.Print", "fmt.Sprintf", "fmt.Sprintln", "fmt.Errorf",
+            "strings.Split", "strings.Join", "strings.Contains", "strings.Replace", "strings.ToUpper", "strings.ToLower",
+            "strings.TrimSpace", "strings.HasPrefix", "strconv.Itoa", "strconv.Atoi", "strconv.ParseFloat", "strconv.ParseInt",
+            "os.Open", "os.Create", "os.ReadFile", "os.WriteFile", "os.Exit", "os.Getenv",
+            "errors.New", "errors.Is", "errors.As", "sync.Mutex", "sync.WaitGroup", "sync.Once",
+            "time.Now", "time.Sleep", "time.Since", "time.Duration", "context.Background", "context.WithCancel",
+            "context.WithTimeout", "make", "append", "len", "cap", "new",
+            "panic", "recover", "defer", "go", "chan", "select"
+        ]
+
+        strings: ["\"", "`", "'"]
+        comment {
+            line: "//"
+            block: ["/*", "*/"]
+        }
+
+        colors {
+            keyword: rgb(0.45, 0.60, 1.00)
+            type: rgb(0.30, 0.85, 0.80)
+            builtin: rgb(0.55, 0.85, 0.70)
+        }
+        icon {
+            color: rgb(0.30, 0.75, 0.90)
+            symbol: "go"
+            svg: "go.svg"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+// Midnight Ocean
+// Converted to Adco. See docs/ADCO.md for the format.
+
+theme "Midnight Ocean" {
+    dark: true
+
+    colors {
+        bg: gray(0.043)
+        surface: gray(0.067)
+        panel: gray(0.086)
+        text: gray(0.90)
+        muted: gray(0.52)
+        accent: rgb(0.20, 0.70, 0.78)
+        accent2: rgb(0.55, 0.45, 0.85)
+        keyword: rgb(0.42, 0.62, 0.95)
+        function: rgb(0.30, 0.80, 0.78)
+        string: rgb(0.55, 0.85, 0.55)
+        comment: rgb(0.38, 0.46, 0.52)
+        cursor: rgb(0.25, 0.85, 0.85)
+        selection: rgb(0.16, 0.32, 0.40)
+        error: rgb(0.95, 0.35, 0.40)
+        warning: rgb(0.92, 0.68, 0.28)
+        success: rgb(0.35, 0.82, 0.55)
+        lineHighlight: gray(0.03)
+    }
+
+    font {
+        family: "JetBrains Mono"
+        size: 12
+    }
+}

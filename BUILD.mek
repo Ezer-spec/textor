@@ -1,0 +1,47 @@
+var version: 2.0.0
+var cxx: {var:cxx.detect}
+
+# -- Compiler flags (common) ---------------------------------------------------
+switch cxxflags {var:platform}:
+  case freebsd: -O3 -std=c++17 -Wno-unused-variable -Wno-comment -Wall -flto -I. -I/usr/local/include -D_XOPEN_SOURCE=700 -DPLATFORM_FREEBSD
+  case linux:   -O3 -std=c++17 -Wno-unused-variable -Wno-comment -Wall -flto -I. -D_XOPEN_SOURCE=700 -DPLATFORM_LINUX
+  default:      -O2 -std=c++17 -Wno-unused-variable -Wno-comment -Wall -I.
+
+# -- Platform link flags -------------------------------------------------------
+switch linkflags {var:platform}:
+  case freebsd: $(pkgconf --libs cairo x11 pango pangocairo 2>/dev/null || pkg-config --libs cairo x11 pango pangocairo 2>/dev/null || echo "-lcairo -lX11 -lpango-1.0 -lpangocairo-1.0 -lglib-2.0 -lgobject-2.0") -lGL -lGLX -lutil -L/usr/local/lib
+  case linux:   $(pkg-config --libs cairo x11 pango pangocairo) -lGL -lGLX -lutil
+  default:      $(pkg-config --libs cairo pango pangocairo)
+
+# -- Include flags -------------------------------------------------------------
+switch inclflags {var:platform}:
+  case freebsd: $(pkgconf --cflags cairo x11 pango pangocairo 2>/dev/null || pkg-config --cflags cairo x11 pango pangocairo 2>/dev/null || echo "-I/usr/local/include/cairo -I/usr/local/include/pango-1.0 -I/usr/local/include/glib-2.0 -I/usr/local/lib/glib-2.0/include -I/usr/local/include/harfbuzz")
+  case linux:   $(pkg-config --cflags cairo x11 pango pangocairo)
+  default:      $(pkg-config --cflags cairo pango pangocairo)
+
+console("Building textor {var:version} on {var:platform}")
+console("Compiler: {var:cxx}")
+
+# -- Build Templates -----------------------------------------------------------
+func compile: {var:cxx} {var:cxxflags} {var:inclflags} -MMD -MF {depfile} -c {source} -o {object}
+func link:    {var:cxx} {var:cxxflags} {objects} -o {output0} {var:linkflags} -pthread
+
+default_target: base
+
+target prepare_dirs:
+  cmd: mkdir -p build
+
+target base:
+  sources: "
+  base.cxx
+  ui/morphing.cxx
+  ui/icon_anim.cxx
+  ui/svg_icons.cxx
+  "
+  outputs: build/textor
+  compile: compile
+  use: link
+  deps: prepare_dirs
+
+target clear:
+  cmd: rm -rf build .mek_filelists

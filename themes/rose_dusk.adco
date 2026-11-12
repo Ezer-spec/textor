@@ -1,0 +1,34 @@
+// Rose Dusk - dark warm theme with pink and peach accents.
+// A function builds the selection colour from the accent.
+
+func tint(c: Color) -> Color {
+    return mix(c, #1A1418, 0.75)
+}
+
+let rose = #E8869B
+
+theme "Rose Dusk" {
+    dark: true
+
+    colors {
+        bg:       gray(0.08)
+        text:     #EADDE2
+        muted:    gray(0.55)
+        accent:   rose
+        accent2:  #C39BD3
+        keyword:  rose
+        function: #F2C48D
+        string:   #A5D6A7
+        comment:  #7A6A74
+        cursor:   #F4A6B6
+        selection: tint(rose)
+        error:    #FF6B7A
+        warning:  #F2C48D
+        success:  #8FD6A0
+    }
+
+    font {
+        family: "JetBrains Mono"
+        size: 12
+    }
+}

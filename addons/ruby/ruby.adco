@@ -1,0 +1,105 @@
+// Ruby Language Support
+// Converted to Adco. See docs/ADCO.md for the format.
+
+addon "Ruby Language Support" {
+    version: "1.0"
+    author: "Textor Community"
+
+    language "Ruby" {
+        extensions: [".rb", ".rake", ".gemspec", ".ru"]
+
+        keywords: [
+            "__ENCODING__", "__LINE__", "__FILE__", "BEGIN", "END", "alias",
+            "and", "begin", "break", "case", "class", "def",
+            "defined?", "do", "else", "elsif", "end", "ensure",
+            "false", "for", "if", "in", "module", "next",
+            "nil", "not", "or", "redo", "rescue", "retry",
+            "return", "self", "super", "then", "true", "undef",
+            "unless", "until", "when", "while", "yield"
+        ]
+
+        types: [
+            "Array", "BasicObject", "Bignum", "Class", "Complex", "Dir",
+            "Encoding", "Enumerator", "Exception", "FalseClass", "Fiber", "File",
+            "Float", "Frozen", "GC", "Hash", "IO", "Integer",
+            "Kernel", "Method", "Module", "NilClass", "Numeric", "Object",
+            "Proc", "Range", "Rational", "Regexp", "Set", "String",
+            "Struct", "Symbol", "Thread", "Time", "TrueClass", "TypeError",
+            "Comparable", "Enumerable", "Errno", "Math", "ObjectSpace"
+        ]
+
+        builtins: [
+            "each", "each_with_index", "each_with_object", "map", "collect", "select",
+            "filter", "reject", "reduce", "inject", "fold", "find",
+            "detect", "any?", "all?", "none?", "count", "sort",
+            "sort_by", "group_by", "first", "last", "flatten", "compact",
+            "uniq", "push", "pop", "shift", "unshift", "to_s",
+            "to_i", "to_f", "to_a", "to_h", "length", "size",
+            "empty?", "is_a?", "kind_of?", "respond_to?", "freeze", "frozen?",
+            "dup", "clone", "gsub", "sub", "match", "scan",
+            "split", "join", "upcase", "downcase", "capitalize", "strip",
+            "chomp", "chop", "start_with?", "end_with?", "include?", "times",
+            "upto", "downto", "step", "lambda", "proc", "block_given?",
+            "yield"
+        ]
+
+        completions: [
+            "puts", "print", "p", "pp", "require", "require_relative",
+            "include", "extend", "prepend", "attr_reader", "attr_writer", "attr_accessor",
+            "raise", "rescue", "ensure", "retry", "lambda", "proc",
+            "block_given?", "yield", "each", "each_with_index", "each_with_object", "map",
+            "collect", "select", "filter", "reject", "reduce", "inject",
+            "fold", "find", "detect", "any?", "all?", "none?",
+            "count", "sort", "sort_by", "group_by", "first", "last",
+            "flatten", "compact", "uniq", "push", "pop", "shift",
+            "unshift", "to_s", "to_i", "to_f", "to_a", "to_h",
+            "length", "size", "empty?", "nil?", "is_a?", "kind_of?",
+            "respond_to?", "instance_of?", "class", "superclass", "ancestors", "new",
+            "initialize", "freeze", "frozen?", "dup", "clone", "object_id",
+            "equal?", "eql?", "equal?", "gsub", "sub", "match",
+            "scan", "split", "join", "upcase", "downcase", "capitalize",
+            "strip", "chomp", "chop", "start_with?", "end_with?", "include?",
+            "times", "upto", "downto", "step", "open", "read",
+            "write", "gets", "chomp"
+        ]
+
+        strings: ["\"", "'", "`"]
+        comment {
+            line: "#"
+            block: ["=begin", "=end"]
+        }
+
+        colors {
+            keyword: rgb(0.85, 0.35, 0.65)
+            type: rgb(0.40, 0.85, 0.75)
+            builtin: rgb(0.55, 0.85, 0.70)
+        }
+        tokenColors {
+            "puts": rgb(0.55, 0.88, 0.55)
+            "print": rgb(0.55, 0.88, 0.55)
+            "p": rgb(0.55, 0.88, 0.55)
+            "pp": rgb(0.55, 0.88, 0.55)
+            "require": rgb(0.85, 0.65, 0.30)
+            "require_relative": rgb(0.85, 0.65, 0.30)
+            "include": rgb(0.85, 0.50, 0.85)
+            "extend": rgb(0.85, 0.50, 0.85)
+            "prepend": rgb(0.85, 0.50, 0.85)
+            "attr_reader": rgb(0.60, 0.80, 0.95)
+            "attr_writer": rgb(0.60, 0.80, 0.95)
+            "attr_accessor": rgb(0.60, 0.80, 0.95)
+            "raise": rgb(0.95, 0.40, 0.40)
+            "fail": rgb(0.95, 0.40, 0.40)
+            "exit": rgb(0.95, 0.40, 0.40)
+            "abort": rgb(0.95, 0.40, 0.40)
+            "nil": rgb(0.75, 0.55, 0.85)
+            "true": rgb(0.45, 0.85, 0.65)
+            "false": rgb(0.95, 0.55, 0.45)
+            "self": rgb(0.75, 0.65, 0.95)
+        }
+        icon {
+            color: rgb(0.88, 0.25, 0.30)
+            symbol: "rb"
+            svg: "ruby.svg"
+        }
+    }
+}

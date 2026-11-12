@@ -1,0 +1,35 @@
+// Example theme - a tour of the Adco language.
+// Open this file in Textor to see it highlighted. Copy it, rename the theme,
+// and change the numbers: the theme appears in Settings -> Themes.
+
+import adco.std
+
+// `let` makes a constant that later lines can use.
+let brand = #E0A030
+
+// A `func` returns one value. This one makes a dimmer copy of a colour.
+func dim(color: Color, amount: Number) -> Color {
+    return mix(color, #000000, amount)
+}
+
+// "extends" starts from another theme and only changes what you write.
+theme "Example Amber" extends "Midnight Ocean" {
+    dark: true
+
+    colors {
+        bg:        gray(0.07)          // gray(0.0) is black, gray(1.0) is white
+        text:      gray(0.88)
+        accent:    brand
+        accent2:   hsl(35, 0.8, 0.65)   // hue (degrees), saturation, lightness
+        selection: dim(brand, 0.65)
+        keyword:   lighten(brand, 0.2)
+        string:    rgb(0.55, 0.85, 0.45)
+        comment:   alpha(gray(0.55), 0.9)
+    }
+
+    font {
+        family: "JetBrains Mono"
+        size: 12 + 1                    // expressions work anywhere a value does
+        lineHeight: 20
+    }
+}

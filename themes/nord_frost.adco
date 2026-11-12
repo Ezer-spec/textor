@@ -1,0 +1,34 @@
+// Nord Frost - cool blue-grey, easy on the eyes.
+// Uses `let` for the palette so the colours are written once.
+
+let ice    = #88C0D0
+let sky    = #81A1C1
+let moss   = #A3BE8C
+let sand   = #EBCB8B
+let berry  = #BF616A
+
+theme "Nord Frost" {
+    dark: true
+
+    colors {
+        bg:       gray(0.135)
+        text:     #D8DEE9
+        muted:    gray(0.58)
+        accent:   ice
+        accent2:  #B48EAD
+        keyword:  sky
+        function: #8FBCBB
+        string:   moss
+        comment:  #616E88
+        cursor:   ice
+        selection: mix(ice, #2E3440, 0.72)
+        error:    berry
+        warning:  sand
+        success:  moss
+    }
+
+    font {
+        family: "JetBrains Mono"
+        size: 12
+    }
+}

@@ -1,0 +1,74 @@
+// Kotlin Language Support
+// Converted to Adco. See docs/ADCO.md for the format.
+
+addon "Kotlin Language Support" {
+    version: "1.0"
+    author: "Textor Community"
+
+    language "Kotlin" {
+        extensions: [".kt", ".kts"]
+
+        keywords: [
+            "abstract", "actual", "annotation", "as", "break", "by",
+            "catch", "class", "companion", "const", "constructor", "continue",
+            "crossinline", "data", "delegate", "do", "dynamic", "else",
+            "enum", "expect", "external", "false", "field", "file",
+            "final", "finally", "for", "fun", "get", "if",
+            "import", "in", "infix", "init", "inline", "inner",
+            "interface", "internal", "is", "it", "lateinit", "noinline",
+            "null", "object", "open", "operator", "out", "override",
+            "package", "param", "private", "property", "protected", "public",
+            "receiver", "reified", "return", "sealed", "set", "setparam",
+            "super", "suspend", "tailrec", "this", "throw", "true",
+            "try", "typealias", "typeof", "val", "value", "var",
+            "vararg", "when", "where", "while"
+        ]
+
+        types: [
+            "Any", "Array", "Boolean", "BooleanArray", "Byte", "ByteArray",
+            "Char", "CharArray", "Comparable", "Double", "DoubleArray", "Float",
+            "FloatArray", "Function", "Int", "IntArray", "Iterable", "Iterator",
+            "List", "Long", "LongArray", "Map", "MutableList", "MutableMap",
+            "MutableSet", "Nothing", "Number", "Pair", "Set", "Short",
+            "ShortArray", "String", "Triple", "Unit", "Collection", "Sequence",
+            "Map", "Entry"
+        ]
+
+        builtins: [
+            "println", "print", "readLine", "arrayOf", "listOf", "mapOf",
+            "setOf", "mutableListOf", "mutableMapOf", "mutableSetOf", "emptyList", "emptyMap",
+            "emptySet", "lazy", "TODO", "error", "check", "require",
+            "assert"
+        ]
+
+        completions: [
+            "println", "print", "readLine", "arrayOf", "listOf", "mapOf",
+            "setOf", "mutableListOf", "mutableMapOf", "mutableSetOf", "emptyList", "emptyMap",
+            "emptySet", "run", "let", "also", "apply", "with",
+            "takeIf", "takeUnless", "lazy", "TODO", "error", "check",
+            "require", "assert", "joinToString", "filter", "map", "flatMap",
+            "forEach", "reduce", "fold", "first", "last", "find",
+            "any", "all", "none", "count", "sumOf", "maxOf",
+            "minOf", "sortedBy", "sortedByDescending", "groupBy", "associateBy", "zip",
+            "toList", "toMutableList", "toSet", "toMap", "StringBuilder", "buildString",
+            "repeat", "to", "Pair", "Triple"
+        ]
+
+        strings: ["\"", "'"]
+        comment {
+            line: "//"
+            block: ["/*", "*/"]
+        }
+
+        colors {
+            keyword: rgb(0.60, 0.45, 1.00)
+            type: rgb(0.35, 0.85, 0.90)
+            builtin: rgb(0.55, 0.85, 0.70)
+        }
+        icon {
+            color: rgb(0.72, 0.45, 0.95)
+            symbol: "kt"
+            svg: "kotlin.svg"
+        }
+    }
+}

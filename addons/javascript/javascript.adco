@@ -1,0 +1,71 @@
+// JavaScript / TypeScript Support
+// Converted to Adco. See docs/ADCO.md for the format.
+
+addon "JavaScript / TypeScript Support" {
+    version: "1.0"
+    author: "Textor Community"
+
+    language "JavaScript" {
+        extensions: [".js", ".mjs", ".cjs", ".jsx", ".ts", ".tsx"]
+
+        keywords: [
+            "async", "await", "break", "case", "catch", "class",
+            "const", "continue", "debugger", "default", "delete", "do",
+            "else", "enum", "export", "extends", "false", "finally",
+            "for", "from", "function", "if", "implements", "import",
+            "in", "instanceof", "interface", "let", "new", "null",
+            "of", "package", "private", "protected", "public", "return",
+            "static", "super", "switch", "this", "throw", "true",
+            "try", "type", "typeof", "undefined", "var", "void",
+            "while", "with", "yield", "as", "any", "boolean",
+            "declare", "interface", "namespace", "never", "readonly", "satisfies",
+            "string", "number", "unknown"
+        ]
+
+        types: [
+            "Array", "Boolean", "Date", "Error", "Function", "Map",
+            "Math", "JSON", "Number", "Object", "Promise", "Proxy",
+            "Reflect", "RegExp", "Set", "String", "Symbol", "WeakMap",
+            "WeakSet", "BigInt", "ArrayBuffer", "Int8Array", "Uint8Array", "Float32Array",
+            "Float64Array"
+        ]
+
+        builtins: [
+            "console", "log", "warn", "error", "info", "debug",
+            "parseInt", "parseFloat", "isNaN", "isFinite", "setTimeout", "setInterval",
+            "clearTimeout", "clearInterval", "require", "module", "exports", "Object.keys",
+            "Object.values", "Object.entries", "Object.assign", "Object.freeze", "Array.isArray", "Array.from",
+            "Array.of", "Promise.all", "Promise.race", "Promise.resolve", "Promise.reject", "JSON.stringify",
+            "JSON.parse", "fetch", "document", "window", "globalThis"
+        ]
+
+        completions: [
+            "console.log", "console.warn", "console.error", "console.info", "Array.isArray", "Array.from",
+            "Array.of", "Object.keys", "Object.values", "Object.entries", "Object.assign", "Object.freeze",
+            "Promise.all", "Promise.race", "Promise.resolve", "Promise.reject", "Promise.allSettled", "JSON.stringify",
+            "JSON.parse", "map", "filter", "reduce", "forEach", "find",
+            "findIndex", "some", "every", "includes", "slice", "splice",
+            "concat", "join", "push", "pop", "shift", "unshift",
+            "flat", "flatMap", "then", "catch", "finally", "async",
+            "await", "setTimeout", "setInterval", "clearTimeout", "clearInterval", "addEventListener",
+            "removeEventListener", "querySelector", "querySelectorAll"
+        ]
+
+        strings: ["\"", "'", "`"]
+        comment {
+            line: "//"
+            block: ["/*", "*/"]
+        }
+
+        colors {
+            keyword: rgb(0.65, 0.45, 0.95)
+            type: rgb(0.30, 0.85, 0.85)
+            builtin: rgb(0.55, 0.85, 0.70)
+        }
+        icon {
+            color: rgb(0.95, 0.85, 0.30)
+            symbol: "js"
+            svg: "javascript.svg"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+*build
+*.mekanism_cas
+*.mekanism_meta
+*.mekanism_cache
+*.mek_filelists
+*.mekanism
+mekanism
+result
+Mekanism.art
+CHANGELOG.md
